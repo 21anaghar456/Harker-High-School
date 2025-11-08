@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Game
+comment0.text=\n\ This\ is\ the\ main\ class\ of\ our\ Chess\ game.\ It\ creates\ the\ Board\ and\ \n\ uses\ BoardDisplay\ to\ display\ the\ contents\ of\ the\ board\ in\ real\ time.\n\ It\ handles\ user\ mouse\ presses\ while\ the\ user\ plays\ the\ game.\n\ \n\ @author\ Anagha\ Ram\ \n\ @version\ 03/30/2020\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Creates\ the\ Board\ and\ uses\ BoardDisplay\ to\ display\ the\ \n\ contents\ of\ the\ board\ in\ real\ time.\ It\ then\ executes\ \n\ prepare_board\ to\ prepare\ the\ board\ and\ play()\n\ to\ play\ the\ game\n\ \n\ @param\ \ \ args\ \ \ \ information\ from\ the\ command\ line\n
+comment2.params=
+comment2.target=void\ prepareBoard()
+comment2.text=\n\ Prepares\ the\ board\ by\ creating\ and\ placing\ all\ the\ pieces\ at\ the\n\ right\ place\ on\ the\ board.\ Also\ creates\ the\ two\ players\ and\ displays\ \n\ the\ board.\n
+comment3.params=player
+comment3.target=void\ nextTurn(Player)
+comment3.text=\n\ Follows\ the\ logic\:\n\ \ \ Alternate\ between\ black\ and\ white.\n\ \ \ Use\ the\ BoardDisplay's\ setTitle\ method\ to\ show\ player's\ name.\n\ \ \ Ask\ player\ for\ its\ next\ move.\n\ \ \ Execute\ that\ move.\n\ \ \ Call\ the\ setColor\ method\ to\ highlight\ the\ source\ and\ destination\ of\ the\ move.\n\ \ \ pause\ for\ half\ a\ second\n\ @param\ \ \ player\ \ \ \ the\ player\n
+comment4.params=nextMove
+comment4.target=void\ setColors(Move)
+comment4.text=\n\ Sets\ the\ color\ to\ display\ the\ move\ executed\n\ The\ source\ is\ marked\ BLUE\n\ Destination\ is\ marked\ GREEN\n\ \n\ @param\ \ \ nextMove\ the\ move\ executed.\n
+comment5.params=
+comment5.target=void\ play()
+comment5.text=\n\ Plays\ the\ game.\ Alternates\ between\ the\ white\ player\ and\ black\ player\ asking\ each\ for\ \n\ its\ next\ turn\n\ Figures\ out\ when\ the\ game\ is\ over\ and\ prompts\ user\ whether\ they\ wast\ to\ start\ a\ new\ game.\n\ It\ would\ also\ identify\ castle,\ check\ and\ checMate\ situations.\n\ \n
+comment6.params=
+comment6.target=void\ startNewGame()
+comment6.text=\n\ start\ a\ new\ game\ by\ clearing\ the\ board\ and\ preparing\ the\ board\ for\ a\ new\ game\n
+comment7.params=nextMove
+comment7.target=void\ promotePawn(Move)
+comment7.text=\n\ It\ displays\ the\ option\ to\ the\ user\ on\ which\ piece\ would\ the\ pawn\ be\ promoted\ to\:\ \n\ Queen/Rook/Bishop/Knight.\n\ Based\ on\ the\ repsonse\ the\ pawn\ would\ be\ promoted\ to\ the\ right\ kind\ of\ piece.\n\ \n\ @param\ \ \ nextMove\ \ \ the\ move\ that\ resulted\ in\ the\ pawn\ being\ promoted\n
+numComments=8

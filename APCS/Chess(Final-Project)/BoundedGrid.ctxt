@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=rows\ cols
+comment0.target=BoundedGrid(int,\ int)
+comment0.text=\n\ Constructs\ an\ empty\ bounded\ grid\ with\ the\ given\ dimensions.\n\ \n\ @precondition\ <code>rows\ >\ 0</code>\ and\ \n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <code>cols\ >\ 0</code>\n\ \n\ @param\ rows\ \ number\ of\ rows\ in\ BoundedGrid\n\ @param\ cols\ \ number\ of\ columns\ in\ BoundedGrid\n
+comment1.params=
+comment1.target=int\ getNumRows()
+comment1.text=\n\ Gets\ the\ number\ of\ rows\ of\ this\ grid.\n\ \n\ @return\ the\ number\ of\ rows\n
+comment2.params=
+comment2.target=int\ getNumCols()
+comment2.text=\n\ Gets\ the\ number\ of\ columns\ of\ this\ grid.\n\ \n\ @return\ the\ number\ of\ columns\n
+comment3.params=loc
+comment3.target=boolean\ isValid(Location)
+comment3.text=\n\ Checks\ if\ a\ location\ is\ valid\ (within\ the\ bounds\ of\ this\ grid).\n\ \n\ @param\ loc\ the\ location\ for\ checking\ validity\n\ \n\ @return\ true\ \ if\ location\ is\ valid;\ otherwise,\n\ \ \ \ \ \ \ \ \ false\ \n
+comment4.params=
+comment4.target=java.util.ArrayList\ getOccupiedLocations()
+comment4.text=\n\ Returns\ all\ occupied\ locations\ in\ this\ grid.\n\ \n\ @return\ an\ ArrayList\ containing\ all\ occupied\ locations\ in\ this\ grid\n
+comment5.params=loc
+comment5.target=java.lang.Object\ get(Location)
+comment5.text=\n\ Returns\ all\ occupied\ locations\ in\ this\ grid.\n\ \n\ @param\ loc\ \ the\ location\ in\ this\ grid\n\ \n\ @return\ the\ object\ at\ location\ in\ this\ grid\n
+comment6.params=loc\ obj
+comment6.target=java.lang.Object\ put(Location,\ java.lang.Object)
+comment6.text=\n\ Puts\ an\ object\ into\ this\ grid\ at\ given\ location.\n\ \n\ @param\ loc\ \ the\ location\ in\ this\ grid\n\ @param\ obj\ \ the\ obj\ to\ be\ put\ into\ this\ grid\ \n\ \ \ \ \ \ \ \ \ \ \ \ \ at\ given\ location\n\ \n\ @return\ the\ old\ object\ at\ the\ given\ location\ in\ \n\ \ \ \ \ \ \ \ \ this\ grid\n
+comment7.params=loc
+comment7.target=java.lang.Object\ remove(Location)
+comment7.text=\n\ Removes\ an\ object\ from\ this\ grid\ at\ given\ location.\n\ \n\ @param\ loc\ \ the\ location\ in\ this\ grid\n\ \n\ @return\ the\ object\ at\ the\ given\ location\ in\ this\ grid\n
+numComments=8

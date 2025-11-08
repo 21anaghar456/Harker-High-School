@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=King
+comment0.text=\n\ This\ is\ the\ main\ class\ of\ our\ King\ piece.\ It\ creates\ a\ king\n\ object\ and\ redefines\ methods\ of\ piece\ that\ need\ to\ be\ special\n\ for\ King\n\ \n\ @author\ Anagha\ Ram\ \n\ @version\ 05/30/2020\n
+comment1.params=col\ fileName
+comment1.target=King(java.awt.Color,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ King\n\ @param\ col\ color\ of\ the\ piece\n\ @param\ fileName\ the\ image\ file\ name\ for\ piece\n
+comment2.params=
+comment2.target=java.util.ArrayList\ destinations()
+comment2.text=\n\ Returns\ the\ list\ of\ valid\ destinations\ that\ the\ King\ can\ move\ to\n\ A\ king\ can\ move\ to\ any\ of\ its\ 8\ neighboring\ locations.\n\ @return\ the\ list\ of\ valid\ destinations\ that\ the\ King\ can\ move\ to\n\ \n
+comment3.params=dest
+comment3.target=boolean\ isValidDestination(Location)
+comment3.text=\n\ Returns\ true\ if\ dest\ is\ valid\ and\ is\ either\n\ (a)\ empty\ or\ (b)\ occupied\ by\ a\ piece\ of\ a\ \n\ different\ color\n\ \n\ @param\ \ \ dest\ \ \ \ the\ destination\ of\ the\ move\n\ @return\ true\ if\ dest\ is\ valid\ and\ false\ otherwise\n
+numComments=4

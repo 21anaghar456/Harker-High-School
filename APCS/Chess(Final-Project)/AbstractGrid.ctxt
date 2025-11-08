@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=loc
+comment0.target=java.util.ArrayList\ getNeighbors(Location)
+comment0.text=\n\ Gets\ all\ the\ objects\ in\ the\ adjacent\ locations.\n\ \n\ @param\ loc\ \ the\ location\ in\ the\ grid\ for\ which\ \ \n\ \ \ \ \ \ \ \ \ \ \ \ \ neighbors\ are\ being\ retrieved\ \n\ \ \n\ @return\ an\ ArrayList\ of\ all\ neighbors\ \n
+comment1.params=loc
+comment1.target=java.util.ArrayList\ getValidAdjacentLocations(Location)
+comment1.text=\n\ Gets\ all\ valid\ adjacent\ locations.\n\ \n\ @param\ loc\ \ the\ current\ location\ in\ the\ grid\ for\ which\ valid\ \n\ \ \ \ \ \ \ \ \ \ \ \ \ adjacent\ locations\ are\ being\ retrieved\ \n\ \ \n\ @return\ an\ ArrayList\ of\ all\ valid\ adjacent\ locations\ \n
+comment2.params=loc
+comment2.target=java.util.ArrayList\ getEmptyAdjacentLocations(Location)
+comment2.text=\n\ Gets\ all\ adjacent\ locations\ that\ do\ not\ contain\ an\ object.\n\ \n\ @param\ loc\ \ the\ current\ location\ in\ the\ grid\ for\ which\ empty\ \n\ \ \ \ \ \ \ \ \ \ \ \ \ adjacent\ locations\ are\ being\ retrieved\ \n\ \ \n\ @return\ an\ ArrayList\ of\ all\ empty/unoccupied\ adjacent\ locations\ \n
+comment3.params=loc
+comment3.target=java.util.ArrayList\ getOccupiedAdjacentLocations(Location)
+comment3.text=\n\ Gets\ all\ adjacent\ locations\ that\ do\ contain\ an\ object.\n\ \n\ @param\ loc\ \ the\ current\ location\ in\ the\ grid\ for\ which\ occupied\ \n\ \ \ \ \ \ \ \ \ \ \ \ \ adjacent\ locations\ are\ being\ retrieved\ \n\ \ \n\ @return\ an\ ArrayList\ of\ all\ occupied\ adjacent\ locations\ \n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\n\ Creates\ a\ string\ that\ describes\ this\ grid.\n\ \n\ @return\ a\ string\ with\ descriptions\ of\ all\ objects\ in\ this\ grid\ (not\n\ \ \ \ \ \ \ \ \ necessarily\ in\ any\ particular\ order),\ in\ the\ format\ \n\ \ \ \ \ \ \ \ \ {loc\=obj,\ loc\=obj,\ ...}\n
+numComments=5

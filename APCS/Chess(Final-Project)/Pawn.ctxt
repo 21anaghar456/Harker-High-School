@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Pawn
+comment0.text=\n\ This\ is\ the\ main\ class\ of\ our\ Pawn\ piece.\ It\ creates\ a\ Pawn\n\ object\ and\ redefines\ methods\ of\ piece\ that\ need\ to\ be\ special\n\ for\ Pawn\n\ \n\ @author\ Anagha\ Ram\ \n\ @version\ 04/25/2020\n
+comment1.params=col\ fileName
+comment1.target=Pawn(java.awt.Color,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Pawn\n\ @param\ col\ color\ of\ the\ piece\n\ @param\ fileName\ the\ image\ file\ name\ for\ piece\n
+comment2.params=
+comment2.target=java.util.ArrayList\ destinations()
+comment2.text=\n\ Returns\ the\ list\ of\ valid\ destinations\ that\ the\ Pawn\ can\ move\ to.\n\ A\ Pawn\ can\ move\ two\ or\ one\ space\ forward\ at\ start\ after\ which\ \n\ it\ can\ move\ one\ space\ forward\ or\ diagonal\ if\ it\ can\ cut\n\ @return\ the\ list\ of\ valid\ destinations\ that\ the\ Pawn\ can\ move\ to\n\ \n
+comment3.params=dest
+comment3.target=boolean\ isValidDestination(Location)
+comment3.text=\n\ Returns\ true\ if\ dest\ is\ valid\ and\ is\ either\n\ (a)\ empty\ or\ (b)\ occupied\ by\ a\ piece\ of\ a\ \n\ different\ color.\ It\ also\ ensures\ that\ when\ the\n\ pawn\ moves\ two\ spaces\ it\ cannot\ jump\n\ \n\ @param\ \ \ dest\ \ \ \ the\ destination\ of\ the\ move\n\ @return\ true\ if\ dest\ is\ valid\ and\ false\ otherwise\n
+numComments=4

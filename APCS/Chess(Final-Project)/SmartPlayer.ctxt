@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=SmartPlayer
+comment0.text=\n\ This\ is\ the\ main\ class\ of\ our\ SmartPlayer(s).\ It\ basically\ stores\ the\ \n\ board,\ name,\ and\ piece\ color\ of\ the\ player.\n\ \n\ @author\ Anagha\ Ram\ \n\ @version\ 05/02/2020\n
+comment1.params=board\ name\ color
+comment1.target=SmartPlayer(Board,\ java.lang.String,\ java.awt.Color)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ SmartPlayer\n\ @param\ board\ the\ board\ in\ context\n\ @param\ name\ the\ name\ of\ the\ player\n\ @param\ color\ the\ piece\ color\ of\ the\ player\n
+comment2.params=
+comment2.target=Move\ nextMoveGetSmart()
+comment2.text=\n\ Follows\ the\ logic\:\n\ \ \ \ \ Loop\ over\ each\ move\ in\ allMoves()\n\ \ \ \ \ \ \ \ \ For\ each\ move\ \n\ \ \ \ \ \ \ \ \ \ \ \ \ \ execute\ the\ move\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ calculate\ the\ score\ of\ the\ board\ \n\ \ \ \ \ \ \ \ \ \ \ \ \ \ undo\ the\ move\n\ \ \ \ \ Figure\ out\ move\ that\ results\ in\ the\ highest\ board\ score\ and\ return\ \ \ \ \ \ \ \ \ \n\ @return\ move\ that\ results\ in\ the\ highest\ board\ score\n
+comment3.params=
+comment3.target=Move\ nextMove()
+comment3.text=\n\ Returns\ the\ move\ that\ results\ in\ the\ highest\ score\ of\ all\ moves\ that\ you\ can\ make.\ This\ \n\ is\ the\ best\ move\ for\ you.\ This\ uses\ the\ minimax\ algorithm.\ At\ this\ level\ the\ \n\ program\ is\ maximinzing\ the\ value\ of\ the\ moves\ that\ you\ can\ make.\ It\ calls\ \n\ valueOfMeanestResponse\ with\ a\ lookahead\ parameter\ on\ how\ deep\ to\ look\ into\ the\ game\ tree.\n\ The\ valueOfMeanestResponse\ will\ provide\ the\ the\ min\ score\ of\ all\ moves\ that\ the\ \n\ opponent\ can\ make.\ This\ is\ the\ best\ move\ for\ the\ opponent.\n\ As\ next\ level,\ valueOfMeanestResponse\ will\ call\ valueOfBestMove\ with\ lookAhead-1.\n\ This\ returns\ the\ highest\ score\ of\ all\ moves\ that\ you\ can\ make.\ This\ \n\ is\ the\ best\ move\ for\ you.\n\ \n\ @return\ the\ move\ that\ results\ in\ the\ highest\ score\ of\ all\ moves\ that\ you\ can\ make.\ This\ \n\ is\ the\ best\ move\ for\ you.\n
+comment4.params=
+comment4.target=int\ score()
+comment4.text=\n\ Sums\ up\ all\ the\ values\ for\ ech\ of\ SmartPlayer's\ pieces\n\ and\ subtracts\ the\ value\ of\ each\ of\ the\ opponen't\ pieces.\n\ This\ total\ that\ indicates\ how\ good\ the\ board\ is\ for\ the\ smartplayer\n\ is\ retuned.\n\ \n\ @return\ the\ value\ of\ the\ board\n
+comment5.params=
+comment5.target=int\ valueOfMeanestResponseGetSmarter()
+comment5.text=\n\ Test\ all\ the\ moves\ your\ opponent\ might\ make\ at\ this\ point\n\ in\ the\ game.\ Find\ the\ move\ that\ is\ best\ for\ the\ opponent.\n\ That\ is\ the\ score\ which\ is\ the\ least\ for\ you.\ We\ will\ assume\ \n\ that\ the\ opponent\ will\ make\ this\ move.\ Return\ the\ least\ score.\n\ \n\ @return\ the\ least\ score\ of\ all\ moves\ that\ the\ oppoent\ can\ make.\ This\ \n\ is\ the\ best\ move\ for\ the\ opponent.\n
+comment6.params=lookAhead
+comment6.target=int\ valueOfMeanestResponse(int)
+comment6.text=\n\ This\ is\ the\ min\ part\ of\ the\ minimax\ algorithm\n\ lookAhead\ indicates\ how\ many\ moves\ to\ look\ ahead\ \n\ If\ lookahead\ \=\=0\ return\ score\n\ Test\ all\ the\ moves\ your\ opponent\ might\ make\ at\ this\ point\n\ in\ the\ game.\ Find\ the\ move\ that\ is\ best\ for\ the\ opponent.\n\ That\ is\ the\ score\ which\ is\ the\ least\ for\ you.\ We\ will\ assume\ \n\ that\ the\ opponent\ will\ make\ this\ move.\ Return\ the\ least\ score.\n\ This\ method\ will\ determine\ the\ score\ by\ calling\ valueOfBestMove\n\ with\ lookAhead-1.\ \n\ \n\ @param\ lookAhead\ that\ indicates\ how\ many\ moves\ to\ look\ ahead\ \ \ \ \ \n\ @return\ the\ least\ score\ of\ all\ moves\ that\ the\ oppoent\ can\ make.\ This\ \n\ is\ the\ best\ move\ for\ the\ opponent.\n
+comment7.params=lookAhead
+comment7.target=int\ valueOfBestMove(int)
+comment7.text=\n\ This\ is\ the\ max\ part\ of\ the\ minimax\ algorithm\n\ lookAhead\ indicates\ how\ many\ moves\ to\ look\ ahead\ \n\ If\ lookahead\ \=\=0\ return\ score\n\ Test\ all\ the\ moves\ you\ might\ make\ at\ this\ point\n\ in\ the\ game.\ Find\ the\ move\ that\ is\ best\ for\ you.\ \n\ That\ is\ the\ score\ which\ is\ the\ highest\ for\ you.\ Return\ the\ highest\ score.\n\ This\ method\ will\ determine\ the\ score\ by\ calling\ valueOfMeanestResponse\n\ with\ lookAhead-1.\ \n\ \n\ @param\ lookAhead\ that\ indicates\ how\ many\ moves\ to\ look\ ahead\ \ \ \ \ \n\ @return\ the\ highest\ score\ of\ all\ moves\ that\ you\ can\ make.\ This\ \n\ is\ the\ best\ move\ for\ you.\n
+numComments=8
