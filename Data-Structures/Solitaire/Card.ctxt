@@ -1,0 +1,28 @@
+#BlueJ class context
+comment0.target=Card
+comment0.text=\n\ Card\ represents\ a\ single\ playing\ card\ with\ three\ atrributes\n\ rank\ -\ int\ from\ 1\ to\ 13\ where\ 1\ \=\ Ace\ and\ 13\ \=\ King\n\ suit\ -\ String,\ "c",\ "d",\ "h",\ or\ "s"\n\ is\ FaceUp\ -\ whether\ a\ card\ is\ FaceUp.\ false\ by\ default\n\ @author\ Anagha\ Ram\n\ @version\ Dec\ 2,\ 2020\n
+comment1.params=rank\ suit
+comment1.target=Card(int,\ java.lang.String)
+comment1.text=\n\ Constructs\ a\ Card\ class\n\ @param\ rank\ the\ input\ rank\n\ @param\ suit\ the\ input\ suit\n
+comment2.params=
+comment2.target=int\ getRank()
+comment2.text=\n\ Gets\ the\ rank\ of\ the\ card\n\ @return\ the\ rank\ of\ the\ card\n
+comment3.params=
+comment3.target=java.lang.String\ getSuit()
+comment3.text=\n\ Gets\ the\ suit\ of\ the\ card\n\ @return\ the\ suit\ of\ the\ card\n
+comment4.params=
+comment4.target=boolean\ isRed()
+comment4.text=\n\ Gets\ if\ the\ suit\ of\ the\ card\ red\n\ @return\ if\ the\ suit\ of\ the\ card\ red\n
+comment5.params=
+comment5.target=boolean\ isFaceUp()
+comment5.text=\n\ Gets\ if\ the\ card\ is\ face\ up\n\ @return\ if\ the\ card\ is\ face\ up\n
+comment6.params=
+comment6.target=void\ turnUp()
+comment6.text=\n\ Turns\ the\ card\ up\n
+comment7.params=
+comment7.target=void\ turnDown()
+comment7.text=\n\ Turns\ the\ card\ down\n
+comment8.params=
+comment8.target=java.lang.String\ getFileName()
+comment8.text=\n\ Gets\ the\ file\ name\ for\ the\ icon\n\ @return\ the\ file\ name\ for\ the\ icon\n
+numComments=9

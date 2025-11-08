@@ -1,0 +1,67 @@
+#BlueJ class context
+comment0.target=Solitaire
+comment0.text=\n\ Solitaire\ game\ class.\ Sets\ up\ the\ game\ and\ manipultes\ the\ stock,\ waste,\n\ foundations,\ and\ piles\ based\ on\ user\ input\n\ Figures\ out\ if\ game\ has\ been\ won\ by\ user\n\ @author\ Anagha\ Ram\n\ @version\ Dec\ 2,\ 2020\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Main\ entry\ point\n\ @param\ args\ the\ arguments\n
+comment10.params=
+comment10.target=void\ resetStock()
+comment10.text=\n\ Resets\ the\ stock\n\ Repeatedly\ move\ the\ top\ cards\ from\ the\ waste\ to\ the\ top\ of\ the\ stock\ untill\n\ there\ are\ no\ cards\ remaining\ in\ the\ waste\n
+comment11.params=card\ index
+comment11.target=boolean\ canAddToPile(Card,\ int)
+comment11.text=\n\ answers\ if\ card\ can\ be\ added\ to\ pile\n\ @param\ card\ card\ to\ be\ added\n\ @param\ index\ of\ pile\n\ @return\ true\ if\ card\ can\ be\ added\ to\ pile\n\ \ \ \ \ \ \ \ \ else\ false\n\ @precondition\ 0\ <\=\ index\ <\ 7\n\ postcondition\:\ Returns\ true\ if\ the\ given\ card\ can\ be\n\ legally\ moved\ to\ the\ top\ of\ the\ given\n\ pile\n
+comment12.params=
+comment12.target=void\ stockClicked()
+comment12.text=\n\ called\ when\ the\ stock\ is\ clicked\n\ tests\ if\ the\ stock\ has\ any\ cards\ left,\ If\ so,\ trandfer\ three\ cards\ to\ waste.\n\ Otherwise\ reset\ stock\n\ Does\ nothing\ if\ waste\ or\ pile\ is\ selected\n
+comment13.params=
+comment13.target=void\ wasteClicked()
+comment13.text=\n\ called\ when\ the\ waste\ is\ clicked\n\ Selects\ waste\ if\ not\ empty\ and\ neither\ waste\ nor\ a\ pile\ is\ already\ selected\n\ Unselect\ waste\ if\ already\ selected\n
+comment14.params=
+comment14.target=void\ wasteDoubleClicked()
+comment14.text=\n\ called\ when\ the\ waste\ is\ double\ clicked\n\ moves\ the\ card\ to\ foundation\ if\ legal\ \ \ \n
+comment15.params=col
+comment15.target=void\ pileDoubleClicked(int)
+comment15.text=\n\ called\ when\ the\ pile\ is\ double\ clicked\n\ moves\ the\ card\ to\ foundation\ if\ legal\n\ @param\ col\ index\ of\ pile\n
+comment16.params=index
+comment16.target=java.util.Stack\ removeFaceUpCards(int)
+comment16.text=\n\ Removes\ and\ returns\ stack\ of\ all\ face-up\ cards\ on\ the\ top\ of\n\ the\ given\ pile\n\ @param\ index\ index\ of\ pile\n\ @return\ stack\ of\ all\ face-up\ cards\ on\ the\ top\ of\ the\ given\ pile\n\ @precondition\ 0\ <\=\ index\ <\ 7\n\ @postcondition\ Removes\ all\ face-up\ cards\ on\ the\ top\ of\n\ the\ given\ pile;\ returns\ a\ stack\ containing\ these\ cards\n
+comment17.params=cards\ index
+comment17.target=void\ addToPile(java.util.Stack,\ int)
+comment17.text=\n\ Removes\ elements\ from\ cards,\ and\ adds\ them\ to\ the\ given\ pile.\n\ @param\ cards\ cards\ to\ be\ added\n\ @param\ index\ index\ of\ the\ pile\ to\ be\ added\n\ @precondition\ 0\ <\=\ index\ <\ 7\n\ @postcondition\ Removes\ elements\ from\ cards,\ and\ add\ them\ to\ the\ given\ pile.\n
+comment18.params=index
+comment18.target=void\ foundationClicked(int)
+comment18.text=\n\ Tests\ if\ the\ selected\ card\ (either\ the\ waste\ card\ or\ the\ top\ card\ of\ the\ selected\ pile)\ \n\ can\ legally\ be\ added\ to\ the\ given\ foundation.\ \n\ If\ so,\ move\ the\ card\ and\ unselect\ the\ source.\ \ \ \ \n\ @param\ index\ index\ of\ foundation\ clicked\n\ @precondition\ \ 0\ <\=\ index\ <\ 4\n
+comment19.params=index
+comment19.target=void\ pileClicked(int)
+comment19.text=\n\ called\ when\ pile\ is\ clicked\n\ Selects\ waste\ if\ not\ empty\ and\ neither\ waste\ nor\ a\ pile\ is\ already\ selected\n\ Unselect\ waste\ if\ already\ selected\n\ whenever\ the\ waste\ is\ selected,\n\ clicking\ on\ the\ pile\ will\ move\ the\ top\ card\ from\ the\ waste\ (whatever\ it\ may\ be)\ \n\ onto\ the\ top\ of\ the\ given\ pile,\ and\ unselect\ the\ waste.\n\ only\ moves\ a\ card\ from\ the\ waste\ to\ the\ given\ pile\ if\ the\ move\ is\ legal.\n\ selects\ the\ pile\ when\ nothing\ is\ selected\ and\ the\ user\n\ clicks\ on\ a\ non-empty\ pile\ whose\ top\ card\ is\ face\ up.\ \n\ Alternatively,\ unselect\ the\ pile\ when\ the\ already-selected\ pile\ is\ clicked.\ \n\ Test\ that\ you\ can\ select\ and\ deselect\ piles\ correctly.\n\ @param\ index\ index\ of\ pile\n\ @precondition\ \ 0\ <\=\ index\ <\ 7\n
+comment2.params=
+comment2.target=Solitaire()
+comment2.text=\n\ Constructs\ Solitaire\ game\ class\n\ creates\ stock,\ waste,\ foundations,\ and\ piles\ to\ be\ empty\ stack\ of\ cards\n
+comment20.params=card\ index
+comment20.target=boolean\ canAddToFoundation(Card,\ int)
+comment20.text=\n\ Can\ given\ card\ can\ be\ legally\ moved\ to\ the\ top\ of\ the\ given\n\ foundation\n\ @param\ card\ card\ to\ add\n\ @param\ index\ inde\ of\ foundation\n\ @return\ true\ if\ the\ given\ card\ can\ be\ legally\ moved\ to\ the\ top\ of\ the\ given\ foundation\n\ \ \ \ \ \ \ \ \ else\ false\n\ @precondition\ 0\ <\=\ index\ <\ 4\n\ @postcondition\ Returns\ true\ if\ the\ given\ card\ can\ be\n\ legally\ moved\ to\ the\ top\ of\ the\ given\ foundation\n
+comment21.params=
+comment21.target=boolean\ hasWon()
+comment21.text=\n\ Figures\ out\ if\ the\ game\ has\ been\ won\n\ @return\ true\ if\ game\ is\ won\n\ \ \ \ \ \ \ \ \ else\ false\n
+comment3.params=
+comment3.target=void\ createStock()
+comment3.text=\n\ Creates\ a\ shuffled\ stock\ of\ 52\ cards\n\ creates\ an\ ArrayList\ of\ 52\ cards\ in\ a\ standard\ deck\n\ repeatdely\ remove\ a\ random\ card\ from\ the\ arraylist\ and\ add\ to\ stock\n
+comment4.params=
+comment4.target=void\ deal()
+comment4.text=\n\ Deals\ card\ to\ the\ 7\ piles\n\ Forms\ the\ initialized\ pile\ configurations\ to\ start\ the\ game\n\ All\ the\ top\ pile\ cards\ should\ be\ faceUp\n
+comment5.params=
+comment5.target=Card\ getStockCard()
+comment5.text=\n\ returns\ the\ card\ on\ top\ of\ the\ stock,\n\ @return\ the\ card\ on\ top\ of\ the\ stock,\ or\ null\ if\ the\ stock\ is\ empty\n
+comment6.params=
+comment6.target=Card\ getWasteCard()
+comment6.text=\n\ returns\ the\ card\ on\ top\ of\ the\ waste\n\ @return\ the\ card\ on\ top\ of\ the\ waste,\ or\ null\ if\ the\ waste\ is\ empty\n
+comment7.params=index
+comment7.target=Card\ getFoundationCard(int)
+comment7.text=\n\ returns\ the\ card\ on\ top\ of\ the\ given\ foundation\n\ @param\ index\ index\ of\ foundation\n\ @return\ a\ reference\ to\ the\ given\ foundation\n\ @precondition\ \ 0\ <\=\ index\ <\ 4\n\ @postcondition\ \ returns\ the\ card\ on\ top\ of\ the\ given\ foundation,\ \n\ \ \ \ \ or\ null\ if\ the\ foundation\ is\ empty\n
+comment8.params=index
+comment8.target=java.util.Stack\ getPile(int)
+comment8.text=\n\ returns\ a\ reference\ to\ the\ given\ pile\n\ @param\ index\ index\ of\ pile\n\ @return\ a\ reference\ to\ the\ given\ pile\n\ @precondition\ \ 0\ <\=\ index\ <\ 7\n\ @postcondition\ returns\ a\ reference\ to\ the\ given\ pile\n
+comment9.params=
+comment9.target=void\ dealThreeCards()
+comment9.text=\n\ Move\ the\ top\ three\ cards\ from\ the\ stock\ onto\ the\ top\ of\ the\ waste.\ \n\ If\ there\ are\ fewer\ than\ three\ cards\ on\ the\ stock,just\ transfer\ \n\ \ \ \ whatever\ is\ left\ to\ the\ waste.\ \n\ Turns\ up\ each\ of\ the\ cards\ you\ move\ onto\ the\ waste.\n
+numComments=22
