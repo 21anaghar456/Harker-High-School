@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=initValue\ initNext
+comment0.target=ListNode(java.lang.Object,\ ListNode)
+comment0.text=\n\ Default\ constructor\ of\ a\ ListNode\n\ \n\ @param\ initValue\ the\ intial\ value\ of\ the\ list\ node\n\ @param\ initNext\ the\ initial\ next\ list\ node\n
+comment1.params=
+comment1.target=java.lang.Object\ getValue()
+comment1.text=\n\ Accessor\ Method\n\ Gets\ the\ value\ of\ the\ ListNode\n\ @return\ the\ value\ of\ the\ ListNode\n
+comment2.params=
+comment2.target=ListNode\ getNext()
+comment2.text=\n\ Accessor\ Method\n\ Returns\ the\ next\ ListNode\n\ @return\ the\ next\ ListNode\n
+comment3.params=theNewValue
+comment3.target=void\ setValue(java.lang.Object)
+comment3.text=\n\ Mutator\ Method\n\ Sets\ the\ value\ of\ the\ current\ ListNode\n\ @param\ theNewValue\ the\ new\ value\ of\ the\ ListNode\n
+comment4.params=theNewNext
+comment4.target=void\ setNext(ListNode)
+comment4.text=\n\ Mutator\ Method\n\ Sets\ the\ next\ ListNode\n\ @param\ theNewNext\ the\ new\ next\ ListNode\n
+numComments=5

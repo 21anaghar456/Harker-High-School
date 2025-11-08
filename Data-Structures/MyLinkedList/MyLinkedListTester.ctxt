@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=MyLinkedListTester
+comment0.text=\ \n\ Tester\ for\ MyLinkedList\n\ @author\ Ms.\ Dattar\n\ @version\ Nov\ 10,\ 2020\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ \ \ Main\ method\n\ \ \ @param\ args\ arguments\n
+comment2.params=s
+comment2.target=void\ debug(java.lang.String)
+comment2.text=\n\ \ \ debug\ method\ to\ print\ usefule\ information\n\ \ \ @param\ s\ string\ to\ print\n
+comment3.params=n
+comment3.target=int\ random(int)
+comment3.text=\n\ \ \ generate\ random\ \#\n\ \ \ @param\ n\ limit\ to\ generate\ ranoim\ number\n
+numComments=4

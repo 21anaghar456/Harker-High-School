@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=DoubleNode
+comment0.text=\ \n\ Node\ for\ a\ doubly\ linked\ list\n\ @author\ Ms.\ Dattar\n\ @version\ Nov\ 10,\ 2020\n
+comment1.params=v
+comment1.target=DoubleNode(java.lang.Object)
+comment1.text=\n\ Creates\ an\ instance\ of\ the\ DoubleNode\ object\ \n\ This\ is\ an\ O(1)\ call\ and\ is\ constant\ time\n\ @param\ v\ the\ object\ that\ will\ be\ set\ to\ the\ node's\ value\n
+comment2.params=
+comment2.target=java.lang.Object\ getValue()
+comment2.text=\n\ Get\ the\ value\ of\ the\ node\n\ @return\ the\ value\ of\ the\ node\n
+comment3.params=
+comment3.target=DoubleNode\ getPrevious()
+comment3.text=\n\ Get\ the\ previous\ node\ of\ the\ node\n\ @return\ the\ previous\ node\ of\ the\ node\n
+comment4.params=
+comment4.target=DoubleNode\ getNext()
+comment4.text=\n\ Get\ the\ next\ node\ of\ the\ node\n\ @return\ the\ next\ node\ of\ the\ node\n
+comment5.params=v
+comment5.target=void\ setValue(java.lang.Object)
+comment5.text=\n\ set's\ the\ value\ of\ the\ node\ to\ the\ passed\ object\ v\n\ @param\ v\ the\ passed\ object\ v\ to\ set\ the\ value\ to\ \n
+comment6.params=p
+comment6.target=void\ setPrevious(DoubleNode)
+comment6.text=\n\ set's\ the\ previous\ node\ the\ node\ to\ the\ passed\ DoubleNode\ p\n\ @param\ p\ the\ passed\ DoubleNode\ p\ to\ set\ the\ previous\ node\ of\ the\ node\ to\n
+comment7.params=n
+comment7.target=void\ setNext(DoubleNode)
+comment7.text=\n\ set's\ the\ next\ node\ the\ node\ to\ the\ passed\ DoubleNode\ p\n\ @param\ n\ the\ passed\ DoubleNode\ n\ to\ set\ the\ next\ node\ of\ the\ node\ to\n
+numComments=8

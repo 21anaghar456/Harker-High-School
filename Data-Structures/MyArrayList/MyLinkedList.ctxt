@@ -1,0 +1,55 @@
+#BlueJ class context
+comment0.target=MyLinkedList
+comment0.text=\n\ MyLinkedList\ is\ used\ when\ you\ need\ an\ ordered\ collection\ of\ objects.\ \n\ The\ size\ is\ dynamic\ and\ is\ altered\ as\ more\ capacity\ is\ needed.\ \n\ Elements\ can\ be\ added\ to\ front/end/at\ any\ index\ in\ the\ list.\ \n\ Elements\ can\ be\ removed\ from\ front/end/at\ any\ index\ in\ the\ list.\ \n\ It\u2019s\ elements\ can\ be\ of\ any\ type.\ Given\ a\ MyLinkedList\ object,\ you\ can\ get\ the\ size\ of\ it,\ \n\ access\ the\ element\ at\ front/end/at\ any\ index\ in\ the\ list,\ and\ set\ the\ element\ at\ an\ index.\ \n\ It\ uses\ a\ doubly\ linked\ list\ for\ implementation.\n\ @param\ <E>\ the\ generic\ type\ of\ object\ for\ the\ list\n\ @author\ Anagha\ Ram\n\ @version\ Nov\ 10,\ 2020\n
+comment1.params=
+comment1.target=MyLinkedList()
+comment1.text=\n\ Creates\ an\ instance\ of\ the\ MyLinkedList\ object\ with\ default\ parameters\n\ \ \ \ \ \ \ \ \ \ \ first\ \=\ null\n\ \ \ \ \ \ \ \ \ \ \ last\ \=\ null\n\ \ \ \ \ \ \ \ \ \ \ size\ \=\ 0\n\ \ \ \ \ \ \ \ \ \ \ This\ is\ an\ O(1)\ call\ and\ is\ constant\ time\n
+comment10.params=index
+comment10.target=java.lang.Object\ remove(int)
+comment10.text=\ \n\ removes\ element\ from\ position\ index,\ moving\ all\ elements\ at\ index\ +1\ to\ the\ left\n\ @param\ index\ the\ index\ at\ which\ to\ remove\ element\n\ @return\ the\ element\ formerly\ at\ the\ specified\ position\ \n\ this\ changes\ the\ internal\ state\ variable\ size\ by\ decrementing\ it\n\ It\ could\ also\ change\ \u201Cfirst\u201D\ and\ \u201Clast\u201D\ if\ index\ \=\ 0\ or\ size-1\n\ @postcondition\ removes\ element\ from\ position\ index,\ moving\ elements\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ at\ position\ index\ +\ 1\ and\ higher\ to\ the\ left\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (subtracts\ 1\ from\ their\ indices)\ and\ adjusts\ size\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ returns\ the\ element\ formerly\ at\ the\ specified\ position\n\ ensures\ that\ the\ retuned\ value\ is\ of\ type\ E.\n\ \ \ \ \ \ \ \ The\ method\ calls\ helper\ method\ getNode\ that\ calls\ helper\ \n\ \ \ \ \ \ \ \ getNodeFromFirst\ if\ index\ is\ in\ the\ \n\ \ \ \ \ \ \ \ first\ half\ of\ the\ list\ and\ helper\ getNodeFromLast\ if\ index\ \n\ \ \ \ \ \ \ \ is\ in\ the\ second\ half\ of\ the\ list.\n\ \ \ \ \ \ \ \ After\ the\ right\ node\ is\ obtained,\ it\ is\ removed.\n\ \ \ \ \ \ \ \ This\ is\ an\ O(n/2)\ call\ average\ time.\ Best\ time\ is\ O(1)\ if\ index\ \=1\ or\ index\ \=\ last.\ \n
+comment11.params=index\ obj
+comment11.target=void\ add(int,\ java.lang.Object)
+comment11.text=\n\ \n\ adds\ obj\ to\ the\ list\ at\ position\ index\n\ this\ changes\ the\ internal\ state\ variable\ size\ by\ incrementing\ it\n\ It\ could\ also\ change\ \u201Cfirst\u201D\ and\ \u201Clast\u201D\ if\ index\ \=\ 0\ or\ size\n\ @param\ index\ the\ position\ at\ which\ to\ add\ the\ object\n\ @param\ obj\ object\ that\ needs\ to\ be\ added\n\ @precondition\ \ 0\ <\=\ index\ <\=\ size\n\ @postcondition\ inserts\ obj\ at\ position\ index,\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ moving\ elements\ at\ position\ index\ and\ higher\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ to\ the\ right\ (adds\ 1\ to\ their\ indices)\ and\ adjusts\ size\n\ The\ method\ calls\ helper\ method\ getNode\ that\ calls\ helper\ getNodeFromFirst\ if\ index\ is\ in\ the\ \n\ first\ half\ of\ the\ list\ and\ helper\ getNodeFromLast\ if\ index\ is\ in\ the\ second\ half\ of\ the\ list.\n\ After\ the\ right\ node\ is\ obtained,\ the\ new\ node\ is\ added\ before\ or\ after\ that.\n\ This\ is\ an\ O(n/2)\ call\ average\ time.\ Best\ time\ is\ O(1)\ if\ index\ \=1\ or\ index\ \=\ size.\ \n\ Average\ case\ it\ is\ O(n)\n
+comment12.params=obj
+comment12.target=void\ addFirst(java.lang.Object)
+comment12.text=\n\ \n\ Adds\ obj\ to\ the\ start\ of\ the\ list\n\ this\ changes\ the\ internal\ state\ variable\ size\ by\ incrementing\ \n\ it\ and\ changes\ \u201Cfirst\u201D\ to\ the\ newly\ \n\ added\ node.\n\ @param\ obj\ object\ that\ needs\ to\ be\ added\n\ It\ could\ also\ change\ \u201Clast\u201D\ if\ size\ \=\ 0\ \n\ This\ is\ O(1)\ as\ it\ does\ not\ need\ to\ traverse\ list\n
+comment13.params=obj
+comment13.target=void\ addLast(java.lang.Object)
+comment13.text=\ \ \ \ \ \ \ \ \ \n\ \n\ Adds\ obj\ to\ the\ end\ of\ the\ list\n\ This\ changes\ the\ internal\ state\ variable\ size\ by\ incrementing\ it\ and\ \n\ changes\ \u201Clast\u201D\ to\ the\ newly\ \n\ added\ node.\n\ @param\ obj\ object\ that\ needs\ to\ be\ added\ \n\ It\ could\ also\ change\ \u201Cfirst\u201D\ if\ size\ \=\ 0\ \n\ This\ is\ O(1)\ as\ it\ does\ not\ need\ to\ traverse\ list\n\ \n
+comment14.params=
+comment14.target=java.lang.Object\ getFirst()
+comment14.text=\n\ \ Gets\ obj\ from\ the\ start\ of\ the\ list\ \ \ \n\ \ @return\ the\ element\ at\ start\ of\ list\n\ This\ is\ O(1)\ as\ it\ does\ not\ need\ to\ traverse\ list\n\ @postcondition\ ensures\ that\ the\ retuned\ value\ is\ of\ type\ E.\n
+comment15.params=
+comment15.target=java.lang.Object\ getLast()
+comment15.text=\n\ \n\ \ \ Gets\ obj\ from\ the\ end\ of\ the\ list\ \n\ \ \ @return\ the\ element\ at\ end\ of\ list\n\ \ \ This\ is\ O(1)\ as\ it\ does\ not\ need\ to\ traverse\n\ \ \ This\ is\ O(1)\ as\ it\ does\ not\ need\ to\ traverse\ list\n\ \ \ @postcondition\ ensures\ that\ the\ retuned\ value\ is\ of\ type\ E.\n
+comment16.params=
+comment16.target=java.lang.Object\ removeFirst()
+comment16.text=\ \ \ \ \ \n\ \n\ Removes\ element\ from\ the\ start\ of\ the\ list\n\ @return\ the\ element\ removed\n\ This\ changes\ the\ internal\ state\ variable\ size\ by\ decrementing\ it\ and\ \n\ adjusts\ \u201Cfirst\u201D\ to\ point\ to\ the\ \n\ second\ item.\ It\ could\ also\ adjust\ last\ if\ there\ is\ only\ one\ item\ in\ the\ list\n\ @postcondition\ ensures\ that\ the\ retuned\ value\ is\ of\ type\ E.\n\ This\ is\ O(1)\ as\ it\ does\ not\ need\ to\ traverse\ list\n
+comment17.params=
+comment17.target=java.lang.Object\ removeLast()
+comment17.text=\n\ \n\ Removes\ element\ from\ the\ end\ of\ the\ list\n\ @return\ the\ element\ removed\n\ This\ changes\ the\ internal\ state\ variable\ size\ by\ decrementing\ it\ and\ adjusts\ \n\ \u201Clast\u201D\ to\ point\ to\ the\ \n\ penultimate\ item.\ It\ could\ also\ adjust\ first\ if\ there\ is\ only\ one\ item\ in\ the\ list\n\ @postcondition\ ensures\ that\ the\ retuned\ value\ is\ of\ type\ E.\n\ This\ is\ O(1)\ as\ it\ does\ not\ need\ to\ traverse\ list\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment2.text=\n\ \ \ \ Creates\ the\ string\ representation\ of\ the\ list\n\ \ \ \ This\ is\ an\ O(n)\ call\ as\ every\ node\ has\ to\ be\ visited\ to\ get\ its\ string\ \n\ \ \ \ representation\ that\ will\ be\n\ \ \ \ concatenated\ to\ create\ the\ overall\ string.\n\ \ \ \ @return\ the\ string\ represntataion\n
+comment3.params=index
+comment3.target=DoubleNode\ getNodeFromFirst(int)
+comment3.text=\ \n\ Gets\ node\ from\ beginning\ of\ list\ given\ index\ \n\ @param\ index\ the\ index\n\ @return\ the\ node\ at\ index\n\ @precondition\ \ 0\ <\=\ index\ <\=\ size\ /\ 2\n\ @postcondition\ starting\ from\ first,\ returns\ the\ node\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ with\ given\ index\ (where\ index\ 0\ returns\ first)\n
+comment4.params=index
+comment4.target=DoubleNode\ getNodeFromLast(int)
+comment4.text=\ \n\ Gets\ node\ from\ end\ of\ list\ given\ index\ \n\ @param\ index\ the\ index\n\ @return\ the\ node\ at\ index\n\ @precondition\ \ size\ /\ 2\ <\=\ index\ <\ size\n\ @postcondition\ starting\ from\ last,\ returns\ the\ node\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ with\ given\ index\ (where\ index\ size-1\ returns\ last)\n
+comment5.params=index
+comment5.target=DoubleNode\ getNode(int)
+comment5.text=\ \n\ Gets\ node\ given\ index\ \n\ @param\ index\ the\ index\n\ @return\ the\ node\ at\ index\n\ The\ method\ calls\ helper\ method\ getNode\ that\ calls\ helper\ getNodeFromFirst\ if\ index\ is\ in\ the\ \n\ \ \ \ \ \ \ \ first\ half\ of\ the\ list\ and\ helper\ getNodeFromLast\ if\ index\ is\ \n\ \ \ \ \ \ \ \ in\ the\ second\ half\ of\ the\ list.\n\ @precondition\ \ 0\ <\=\ index\ <\ size\n\ @postcondition\ starting\ from\ first\ or\ last\ (whichever\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ is\ closer),\ returns\ the\ node\ with\ given\ index\n
+comment6.params=
+comment6.target=int\ size()
+comment6.text=\n\ Returns\ the\ size\ of\ the\ MyLinkedList\ object\n\ @return\ size\ of\ list\n\ \ \ This\ is\ an\ O(1)\ call\ and\ is\ constant\ time\ as\ it\ returns\ the\ size\ stored\ \n\ \ \ as\ an\ instance\ variable\n
+comment7.params=index
+comment7.target=java.lang.Object\ get(int)
+comment7.text=\n\ \n\ Returns\ the\ element\ at\ index\ provided\n\ @param\ index\ the\ index\n\ @return\ element\ at\ index\n\ The\ method\ calls\ helper\ method\ getNode\ that\ calls\ helper\ getNodeFromFirst\ if\ index\ is\ in\ the\ \n\ first\ half\ of\ the\ list\ and\ helper\ getNodeFromLast\ if\ index\ is\ in\ the\ second\ half\ of\ the\ list.\n\ This\ is\ an\ O(n/2)\ call\ average\ time.\ Best\ time\ is\ O(1)\ if\ index\ \=1\ or\ index\ \=\ last.\ \n\ @postcondition\ ensures\ that\ the\ retuned\ value\ is\ of\ type\ E.\n
+comment8.params=index\ obj
+comment8.target=java.lang.Object\ set(int,\ java.lang.Object)
+comment8.text=\ \n\ \ Replaces\ the\ element\ at\ position\ index\ with\ obj\n\ \ @param\ index\ the\ index\ \ \n\ \ @param\ obj\ the\ object\ to\ set\ value\ at\ index\ with\n\ \ @return\ the\ element\ formerly\ at\ the\ specified\ position\n\ \ The\ method\ calls\ helper\ method\ getNode\ that\ calls\ helper\ \n\ \ getNodeFromFirst\ if\ index\ is\ in\ the\ \n\ \ first\ half\ of\ the\ list\ and\ helper\ getNodeFromLast\ if\ index\ \n\ \ is\ in\ the\ second\ half\ of\ the\ list.\n\ \ After\ the\ right\ element\ is\ obtained,\ obj\ is\ set.\n\ \ This\ is\ an\ O(n/2)\ call\ average\ time.\ Best\ time\ is\ O(1)\ if\ index\ \=1\ or\ index\ \=\ last.\ \n\ @postcondition\ replaces\ the\ element\ at\ position\ index\ with\ obj\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ returns\ the\ element\ formerly\ at\ the\ specified\ position\n
+comment9.params=obj
+comment9.target=boolean\ add(java.lang.Object)
+comment9.text=\n\ \n\ appends\ obj\ to\ end\ of\ list;\n\ @param\ obj\ the\ object\ to\ add\ to\ the\ end\ of\ the\ list\n\ @return\ true\n\ this\ changes\ the\ internal\ state\ variable\ size\ by\ incrementing\ it\n\ it\ also\ change\ the\ \u201Clast\u201D\ instance\ variable\ to\ point\ to\ the\ newly\ added\ node\n\ it\ could\ also\ change\ \u201Cfirst\u201D\ if\ size\ \=0\n\ @postcondition\ appends\ obj\ to\ end\ of\ list;\ returns\ true\n\ \ \ \ \ \ \ This\ is\ an\ O(1)\ call\ and\ is\ constant\ time\ as\ we\ do\ not\ need\ to\ traverse\ the\ array.\ \n\ \ \ \ \ \ \ We\ need\ to\ access\ the\ last\ node\ only.\n
+numComments=18
