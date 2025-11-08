@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=BinaryTreeTester
+comment0.text=\n\ Tests\ the\ Binary\ Tree.\n\n\ @author\ Sorjo\ Banerjee\n\ @version\ 1/14/15\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Main\ entry\ point\n\ @param\ args\ the\ arguments\n
+comment2.params=
+comment2.target=BinaryTreeTester()
+comment2.text=\n\ Constructs\ BinaryTreeTester\ class\ that\ tests\ all\ the\ methods\ of\ the\ TreeDispay\ and\ TreeUtil\n
+comment3.params=value
+comment3.target=void\ sendValue(java.lang.Object)
+comment3.text=\n\ called\ by\ the\ display\ object\ to\ send\ back\ the\ node\ value\n\ when\ a\ node\ is\ visited\n\ @param\ value\ to\ be\ printed\n
+numComments=4

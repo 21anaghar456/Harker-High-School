@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=KeyValue
+comment0.text=\n\ A\ node\ that\ stores\ a\ key\ value\ pair\n\ It\ is\ a\ comparable\n\ \n\ @author\ Anagha\ Ram\n\ @version\ jan\ 8,\ 2021\n\n
+comment1.params=key\ value
+comment1.target=KeyValue(int,\ int)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ keyValue\n\ @param\ key\ the\ key\n\ @param\ value\ the\ value\n
+comment2.params=
+comment2.target=int\ getKey()
+comment2.text=\n\ Returns\ the\ key\n\ @return\ key\ the\ key\n
+comment3.params=
+comment3.target=int\ getValue()
+comment3.text=\n\ Returns\ the\ value\n\ @return\ the\ value\n
+comment4.params=val
+comment4.target=void\ setValue(int)
+comment4.text=\n\ Sets\ the\ value\n\ @param\ val\ the\ value\n
+comment5.params=otherObj
+comment5.target=int\ compareTo(KeyValue)
+comment5.text=\n\ @param\ \ \ otherObj\ KeyValue\ obj\ to\ be\ compared\n\ @return\ \ A\ negative\ integer,\ zero,\ or\ a\ positive\ integer\ as\ this\ key\n\ \ \ \ \ \ \ \ \ \ is\ less\ than,\ equal\ to,\ or\ greater\ than\ the\ supplied\ key\n
+numComments=6

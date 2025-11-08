@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=TreeMapTester
+comment0.text=\n\ Tests\ the\ TreeMap\ Tree.\n\n\ @author\ Anagha\ Ram\n\ @version\ 01/08/21\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Main\ entry\ point\n\ @param\ args\ the\ arguments\n
+comment2.params=s
+comment2.target=void\ debug(java.lang.String)
+comment2.text=\n\ called\ when\ debug\ output\ needs\ to\ be\ printed\ to\ screen\n\ @param\ s\ string\ to\ be\ printed\n
+comment3.params=n
+comment3.target=int\ random(int)
+comment3.text=\n\ called\ when\ ramdom\ number\ needs\ to\ be\ generated\n\ @param\ n\ the\ max\ value\n
+numComments=4

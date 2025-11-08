@@ -1,0 +1,341 @@
+//
+// Calculator is used to add, subtract, multiply, square, findOdd number, 
+// find max of 2 numbers, and absolute value of a number
+// 
+// @author Anagha Ram
+// @version Sep 2, 2020
+
+public class Calculator
+{
+   public Calculator()
+   {
+   }
+	
+   // Adds 2 numbers
+   // @param num1 the first number
+   // @param num2 the second number
+   // @return the sum
+   public add(num1, num2)
+   {
+      return num1+num2;
+   }
+
+   // Subtracts 2 numbers
+   // @param num1 the first number
+   // @param num2 the second number
+   // @return the difference
+
+   public subtract(num1, num2)
+   {
+      return num1-num2;
+   }
+
+   // Multiplies 2 numbers
+   // @param num1 the first number
+   // @param num2 the second number
+   // @return the product
+
+
+   public multiply(num1, num2)
+   {
+      return num1*num2;
+   }
+
+   // Squares a number
+   // @param num the number
+   // @return the square of the number
+
+
+   public square(num)
+   {
+       return num*num;
+   }
+
+
+   // Finds if the number is odd
+   // @param num the number
+   // @return true if the number is odd
+   //     else false
+ 
+   public isOdd(num)
+   {
+        return (num%2!=0); 
+   }
+
+   // Finds the max of 2 numbers
+   // @param num1 the first number
+   // @param num2 the second number
+   // @return the max of the 2 numbers   
+
+
+   public max(num1, num2)
+   {
+        if (num1> num2)
+        {
+            return num1;        
+        }
+        if (num2>num1)
+        {               
+            return num2;
+        }
+        return num1;
+   } 
+}
+
+//
+// Box is used to save a value and return it when needed
+// 
+// @author Anagha Ram
+// @version Sep 2, 2020
+
+
+public class Box
+{
+
+private value; 
+
+   // Constructs a new Box class 
+   // @param val value to be stored
+
+   public Box(val)
+   {
+	value= val;
+   }
+   // gets the stored value
+   // @return the stored value  
+
+   public getValue()
+   {
+	return value;
+   }
+
+   // Sets the value to be stored 
+   // @param num value to be stored
+
+
+   public setValue(num)
+   {
+	 value= num; 
+   }
+}
+
+
+//
+// Counter is used to keep count of clock ticks
+//
+// @author Anagha Ram
+// @version Sep 2, 2020
+
+
+public class Counter
+{
+
+     private count;
+
+     // Constructs a new Counter class
+     //
+
+     public Counter()
+     {
+                count=0;
+     }
+
+     // increments count
+
+     public tick()
+     {
+                count = count+1;
+     }
+
+     // resets count to 0
+
+     public reset()
+     {
+                count=0;
+     }
+
+     // gets the stored count
+     // @return the stored count
+
+     public getCount()
+     {
+          return count;
+     }
+
+
+}
+
+
+
+// Flipper is used to keep returning alternating true and false
+// starting with true.
+//
+// @author Anagha Ram
+// @version Sep 2, 2020
+
+
+
+public class Flipper
+{ 
+
+     private current;
+
+     // Constructs a new Flipper class
+     //
+
+    public Flipper()
+    {
+         current=false;
+    }
+
+     // flips current and returns it
+     // @return the not of stored value current
+
+
+     public next()
+     {
+         current= !current; 
+         return current;
+     }
+}
+
+// Fibber implements the Fibonnaci sequence
+// It returns the next number in the sequence every time
+//     next() is called
+//
+// @author Anagha Ram
+// @version Sep 2, 2020
+
+public class Fibber
+{
+
+        private fibn;
+        private fibnMinus1;
+        
+
+        // Constructs a new Fibber class
+        //
+
+        public Fibber()
+        {
+                fibn = 0;
+                fibnMinus1=1;
+        }
+
+        // implements the fibonacci algorithm
+        // @return fibonacci number next in the sequence
+
+	public next()
+	{
+             toRet = fibn + fibnMinus1;
+             fibnMinus1 = fibn;
+             fibn = toRet;            
+	       return toRet;
+	}
+}
+//
+// Container stores stuff
+// It returns stuff when getStuff is called
+// I modified the class to have a setStuff() method
+// otherwise it would not be possible to get Swapper to work
+// as swapper.swap is passed object references and object references 
+// cannot be swapped but their contents can be swapped 
+// @author Anagha Ram
+// @version Sep 2, 2020
+
+
+public class Container
+
+{
+     private stuff;
+     // Constructs a new Container class
+     // @param s stuff to be stored
+
+     public Container(s) { stuff = s;}
+
+     // returns stuff
+     // @return stuff
+
+     public getStuff() { return  stuff;}
+     // sets stuff   
+     // @param s new stuff
+
+     public setStuff(s) { stuff =s;}
+}
+
+//
+// Swapper class that swaps stuffs stored in 2 Containers
+//
+// @author Anagha Ram
+// @version Sep 2, 2020
+
+
+public class Swapper
+
+{
+  // Swaps c1 and c2 object's stuff    
+  // @param c1 first object reference
+  // @param c2 second object reference
+
+
+            public swap(c1,c2)
+            {
+                  temp = c1.getStuff();
+                  c1.setStuff(c2.getStuff());
+                  c2.setStuff(temp);
+            }
+}
+
+
+//
+// Enumerator class that lists all integers from a low to high value
+// @author Anagha Ram
+// @version Sep 2, 2020
+
+
+public class Enumerator
+{ 
+  
+  private low;
+  private high;
+  private current;
+  
+  //  contructs an Enumertor class
+  // @param low low value
+  // @param high high value
+     
+  public Enumerator(inlow,inhigh)
+  { 
+       low = inlow;
+       high = inhigh;
+       current = low;
+  }
+  
+  // returns if there is integer left to be enumertated
+  // @return true if there is integer left to be enumertated
+  //          else return false
+            
+            
+  public hasNext()
+  {     
+       return (current <= high);
+  }
+
+  // returns integer to be enumertated
+  // @return  integer to be enumertated
+           
+  public next()    
+  {
+     if (this.hasNext())
+     {
+       current=current+1;
+       return current-1;
+     }
+     else
+     {
+       return null;
+     }
+  }
+ 
+}
+

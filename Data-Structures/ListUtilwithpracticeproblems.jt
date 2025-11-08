@@ -1,0 +1,334 @@
+//
+// ListUtil is used to implement following Linked List methods with a 
+// recursive method. addValues, size, get, makeList, add, remove, reverse
+// 
+// @author Anagha Ram
+// @version Oct 10, 2020
+public class ListUtil
+{
+
+        // Adds all the values in the list
+        // @param list the linked list
+        // @return the sum of all values in the list
+
+        public addValues(list)
+        {
+        	if(list == null) return 0;
+        	return list.getValue() + this.addValues(list.getNext());
+	}
+
+        // Computes the size of the list
+        // @param list the linked list
+        // @return the size of the list 
+	public size(list)
+	{ 
+        	if(list == null) return 0;
+        	return 1 + this.size(list.getNext());
+	}
+
+        // Gets the element at a given index in a list
+        // @param list the linked list
+        // @param index the index whose element is returned
+        // @return the element at a given index in a list 
+	public get(list,index)
+	{ 
+        	if(index == 0) return list.getValue();
+        	return this.get(list.getNext(),index-1);
+	}
+
+        // Creates a list with multiple copies (num) of a given value
+        // @param num the number of copies to be made
+        // @param value the value to be copied to each element in the list
+        // @return a list with multiple copies (num) of a given value
+	public makeList(num,value)
+	{ 
+        	if(num == 0) return null;
+        	return (new ListNode(value, this.makeList(num-1,value)));
+	}
+
+        // Takes a list and a value and adds the value to the end of the list
+        // @param list the linked list
+        // @param value value to be added to the list
+        // @return a list with value added to the end of the list 
+        public add(list,value)
+        {
+        	if (list == null) 
+                {
+                  return (new ListNode(value, null));
+                }
+                list.setNext(this.add(list.getNext(),value)); 
+                return list;
+	}
+
+        // Takes a list and a value and removes all occurrences of the value from the list
+        // @param list the linked list
+        // @param value value to be removed from the list
+        // @return the list with all occurrences of the value removed from the list
+        public remove(list,value)
+        {
+        	if (list == null)
+                {
+                  return null;
+                }       
+        	newList = this.remove(list.getNext(),value);
+                if (list.getValue() != value)
+		{
+		   list.setNext(newList);
+                   return list;
+		}
+                return newList;
+		
+	}
+
+        // Takes a list, reverse it and return a pointer to the front of the reversed list 
+        // @param list the linked list
+        // @return a pointer to the front of the reversed list 
+	public reverse(list) 
+	{
+		if (list==null || list.getNext() == null)
+			return list;
+		newList = this.reverse(list.getNext());
+		list.getNext().setNext(list);
+		list.setNext(null);
+		return newList;
+	}
+	public sum (list)
+        {
+           
+           if (list == null) return 0;
+           return list.getValue()+this.sum(list.getNext());
+
+        }
+	
+	public copy(list)
+        {
+           
+           if (list == null) return null;
+           newNode = new ListNode (list.getValue(),null);
+           newNode.setNext(this.copy(list.getNext()));
+           return newNode;
+        }
+
+	public append(list1,list2)
+        {
+           if (list1.getNext() == null) 
+           {
+                list1.setNext(list2);
+		return null;
+           }           
+           return this.append(list1.getNext(),list2);
+        }
+
+	public sameSize(list1,list2)
+        {
+           if (list1 == null) 
+           {
+                if (list2 != null) return false;
+                return true;
+           }           
+           return this.sameSize(list1.getNext(),list2.getNext());
+        }
+
+	public hasSize(list,size)
+        {
+           if (list == null)
+	   {
+		if (size ==0) return true;
+                return false;
+           } 
+           return this.hasSize(list.getNext(),size-1);
+        }
+
+	public removeLast(list)
+        {
+           if (list == null) 
+           {
+                return list.setNext(null);
+           }           
+           return this.removeLast(list.getNext());
+	}
+
+        public allSame(list)
+	{
+	   
+          if (list == null) return true;
+          if (list.getNext() == null) return true;
+          toRet = (list.getValue() == list.getNext().getValue());
+          return (toRet && this.allSame(list.getNext()));
+	}
+ 
+
+        public withoutDups(list)
+        {
+           
+           if (list == null) return null;
+           if (!this.isinList(list.getNext(),list.getValue()))
+           {
+               newNode = new ListNode (list.getValue(),null);
+               newNode.setNext(this.withoutDups(list.getNext()));
+               return newNode;
+	   }
+           return this.withoutDups(list.getNext());   
+        }
+	private isinList(list,num)
+	{
+             if (list == null) return false;
+             if (list.getValue() == num) return true;
+             return this.isinList(list.getNext(),num);
+          
+	}
+        public inCommon(list1,list2)
+        {
+           
+           if (list1 == null) return null;
+           if (this.isinList(list2,list1.getValue()))
+           {
+           	if (!this.isinList(list1.getNext(),list1.getValue()))
+           	{
+               		newNode = new ListNode (list1.getValue(),null);
+               		newNode.setNext(this.inCommon(list1.getNext(),list2));
+               		return newNode;
+	   }    }
+           return this.inCommon(list1.getNext(),list2);   
+        }
+
+         
+	public copyMultiples(list,num)
+        {
+           
+           if (list == null) return null;
+           if (list.getValue()%num == 0)
+           {
+           	newNode = new ListNode (list.getValue(),null);
+           	newNode.setNext(this.copy(list.getNext()));
+                return newNode;
+	   }
+	   return this.copy(list.getNext());
+           
+        }
+
+
+        public doubleOrHalve(list)
+	{
+	   
+          if (list == null) return null;
+          if (list.getValue()%2 == 0)
+          {
+           	list.setValue(list.getValue()/2);
+	  }
+          else
+          {
+           	list.setValue(list.getValue()*2);
+	  }
+
+          return (this.doubleOrHalve(list.getNext()));
+	}
+
+
+        public removeNode(list, index)
+
+	{
+           
+           if (list == null) return null;
+   
+	   if (index ==1)
+           {
+               list.setNext(list.getNext().getNext());
+               return null;
+           }
+           return this.removeNode(list.getNext(),index-1);
+
+	}
+
+}
+
+//
+// Memorizer is used to implement a seen method that spots values it has seen before
+// 
+// @author Anagha Ram
+// @version Oct 10, 2020
+public class Memorizer
+{
+        private numsSeen;
+	private listUtil;
+        // Constructs a Memorizer with default values
+ 	public Memorizer()
+	{
+            listUtil = new ListUtil();
+	}
+
+        // Returns true when it's given a number it has already seen and false when it is given a new number
+        // @param num the number given
+   	// @return true when it's given a number it has already seen
+   	//     else false
+	public seen(num)
+	{
+            	toRet = this.seenHelper(numsSeen,num);
+                if (toRet)
+		{
+            		return toRet;
+		}        
+            	numsSeen = listUtil.add(numsSeen,num);
+            	return toRet;
+
+	}
+
+        // Traverses the list to see if the given number is in the list
+        // @param list the linked list
+        // @param num given number
+   	// @return true when num is in the list
+   	//     else false
+        public seenHelper(list,num)
+        {
+                if(list == null) return false;
+                if (list.getValue() == num) return true;
+        	return this.seenHelper(list.getNext(),num);
+        }
+
+
+
+}
+//This class implements a node in the list so a list can be created by 
+// concatenating lots of listNode objects together. 
+public class ListNode
+{
+	private value;
+
+	private next;
+        // Constructs a ListNode with provided values
+        // @param initValue the initial value given
+        // @param initNext pointer to next node
+	public ListNode(initValue, initNext)
+	{ 
+
+		value = initValue; 
+		next = initNext; 
+	}
+        // Gets the current value of the node
+   	// @return current value of the node
+	public getValue() 
+	{ 
+		return value; 
+	}
+        // Gets the next pointer of the node
+   	// @return the next pointer of the node
+	public getNext() 
+	{ 
+		return next; 
+	}
+        // set the value of the node
+        // @param theNewValue the new value of the node
+	public setValue(theNewValue) 
+	{ 
+		value = theNewValue; 
+	}
+        // set the next pointer of the node
+        // @param theNewNext the next pointer of the node
+	public setNext(theNewNext) 
+	{ 
+		next = theNewNext; 
+	}
+}
+
+
+

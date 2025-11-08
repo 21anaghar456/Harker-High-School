@@ -1,0 +1,182 @@
+//
+// Fancycalc is used to implement following fancy calculator methods with a 
+// recursive method. pow, fastpow, gcd, isPrime, fact, fib, sqrt
+// 
+// @author Anagha Ram
+// @version Sep 15, 2020
+public class FancyCalc
+{
+
+        // Computes base to the exponent power
+        // @param base the base
+        // @param exponent the exponent
+        // @return the result of base to the exponent power 
+	public pow(base, exponent)
+	{
+	    if (exponent == 0)
+               return 1;
+            else
+               return base* (this.pow(base,exponent-1)); 
+        }
+
+        // Computes the square of a number
+        // @param base the number 
+        // @return the square of number
+	public square(base)
+	{
+             return base*base;
+        }
+
+        // Computes base to the exponent power in a fast manner
+        // @param base the base
+        // @param exponent the exponent
+        // @return the result of base to the exponent power 
+        public fastPow(base, exponent)
+        {
+                //base case
+                if (exponent == 0)
+                     return 1;
+                if (exponent % 2 == 0)
+                    return this.square(
+                        this.fastPow(base,exponent/2));
+                return base * this.fastPow(base,exponent-1);
+        }
+
+        // Computes the GCD of two numbers using the Euclid algorithm 
+        // @param a the first number
+        // @param b the second number
+        // @return the the GCD of two numbers a and b
+        public gcd(a,b)
+        {
+                //base case
+                if (b == 0)
+                   return a;
+                else
+		   return this.gcd(b,a%b);
+        }
+
+        // Computes the absolute value of a number
+        // @param x the number
+        // @return the absolute value of x
+        private abs(x)
+        {
+           if (x >= 0)
+              return x;
+           return -1*x;
+        }
+
+
+        // return if the number is prime
+        // @param num the number 
+        // @return true if the number is prime
+        //     else false
+        public isPrime(num)
+        {
+           return this.helpPrime(this.abs(num), 2);
+        }
+
+        // Computes if num is prime by trying to divide by all integers from 2 to num-1
+        // @param num the number
+        // @param divisor the current divisor in the range of 2 to num-1
+        // @return true if the number is prime
+        //     else false
+        private helpPrime(num, divisor)
+        {
+           if (num == 1)
+              return false;
+           if (divisor == num)
+              return true;
+           if (num % divisor == 0)
+              return false;
+           return this.helpPrime(num,divisor+1);
+        }
+
+
+        // Computes factorial of a number
+        // @param n the number
+        // @return factorial of n
+        public fact(n)
+        {
+             return this.factHelp(n,1);
+        }
+
+        // Computes factorial of a number by calling itself recursively
+        // @param n the number
+        // @param result the factorial as the result
+        // @return factorial of n
+        private factHelp(n, result)
+        {
+             if (n == 0)
+                return result;
+             else
+                return this.factHelp(n - 1,result*n);
+        }
+
+        // Computes the nth element of the fibonaci sequence
+        // @param n the nth element
+        // @return the nth element of the fibonaci sequence
+        public fib (n)
+        {
+             if (n == 1)
+               return 1;
+             if (n == 2)
+               return 1;
+             return this.fib(n-1) + this.fib(n-2);
+        }
+
+        // Computes the average of two numbers
+        // @param x the first number
+        // @param y the second number
+        // @return the average of two numbers x,y 
+        private average (x,y)
+        {
+
+           return (x+y)/2;
+        }
+
+        // Figures out if the guess for sqrt is close enough to the real value (num)
+        // @param guess the guess
+        // @param numbyguess num divided by guess
+        // @return true if the guess for sqrt is close enough to the real value (num)
+        //     else false
+        private stop (guess, numbyguess)
+        {
+           if (guess == numbyguess)
+              return true;
+           if ((numbyguess - guess) == 1)
+              return true;
+           if ((guess - numbyguess) == 1)
+              return true;
+           return false;
+        }  
+
+        // Computes the square root of a number by using Newton's method
+        // @param num the number
+        // @param guess the current guess of the sqrt
+        // @return the square root of num
+        private helpSqrt(num, guess)
+        {
+           numByGuess = num/guess;
+           if (this.stop (guess, numByGuess))
+           {
+              if (numByGuess < guess)
+              {
+                 return guess-1;
+              }
+              return guess;
+           }
+           guess = this.average(numByGuess,guess);
+           return this.helpSqrt(num,guess);
+            
+        }  
+
+        // Computes the square root of a number 
+        // @param num the number
+        // @return the square root of num
+        public sqrt(num)
+        {
+          return this.helpSqrt(num, 1);
+
+        }  
+
+}
